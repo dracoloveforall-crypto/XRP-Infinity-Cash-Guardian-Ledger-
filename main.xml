@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+    <kcfgfile name=""/>
+
+    <group name="General">
+        <entry name="enableTransparency" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="cryptoList" type="String">
+            <default>BTC,ETH</default>
+        </entry>
+        <entry name="updateInterval" type="Int">
+            <default>60</default>
+        </entry>
+        <entry name="customTitle" type="String">
+            <default>My Cryptonite</default>
+        </entry>
+        <entry name="headerColor" type="String">
+            <default>white</default>
+        </entry>
+        <entry name="positiveColor" type="String">
+            <default>#c6f4c6</default>
+        </entry>
+        <entry name="negativeColor" type="String">
+            <default>#f4a4a4</default>
+        </entry>
+        <entry name="portfolio" type="String">
+            <default>{}</default>
+        </entry>
+    </group>
+
+    <group name="Notifications">
+        <entry name="notificationsEnabled" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="gainSound" type="String">
+            <default></default>
+        </entry>
+        <entry name="lossSound" type="String">
+            <default></default>
+        </entry>
+    </group>
+</kcfg>

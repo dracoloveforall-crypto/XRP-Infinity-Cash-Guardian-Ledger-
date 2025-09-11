@@ -1,0 +1,44 @@
+msgid "Cryptonite Help"
+msgstr "Cryptonite Hilfe"
+
+msgid "General Settings Help:"
+msgstr "Allgemeine Einstellungen Hilfe:"
+
+msgid "Notifications Settings Help:"
+msgstr "Benachrichtigungseinstellungen Hilfe:"
+
+msgid "Widget Title: Custom name for your widget"
+msgstr "Widget-Titel: Benutzerdefinierter Name für Ihr Widget"
+
+msgid "Cryptocurrencies: Comma-separated symbols (BTC,ETH,XRP)"
+msgstr "Kryptowährungen: Kommagetrennte Symbole (BTC,ETH,XRP)"
+
+msgid "Update Interval: Data refresh rate in seconds"
+msgstr "Aktualisierungsintervall: Datenaktualisierungsrate in Sekunden"
+
+msgid "Colors: Customize widget appearance"
+msgstr "Farben: Widget-Erscheinungsbild anpassen"
+
+msgid "Portfolio: Enter your cryptocurrency holdings"
+msgstr "Portfolio: Geben Sie Ihre Kryptowährungsbestände ein"
+
+msgid "Amount: Quantity you own"
+msgstr "Menge: Anzahl die Sie besitzen"
+
+msgid "Purchase Price: Price per coin when purchased"
+msgstr "Kaufpreis: Preis pro Münze beim Kauf"
+
+msgid "Enable notifications: Toggle sound alerts"
+msgstr "Benachrichtigungen aktivieren: Sound-Warnungen ein-/ausschalten"
+
+msgid "Gain Sound: Play when portfolio increases by 0.5%"
+msgstr "Gewinn-Sound: Wiedergabe bei Portfolio-Steigerung um 0,5%"
+
+msgid "Loss Sound: Play when portfolio decreases by 0.5%"
+msgstr "Verlust-Sound: Wiedergabe bei Portfolio-Rückgang um 0,5%"
+
+msgid "Sounds will play when your total profit/loss changes by more than 0.5%."
+msgstr "Sounds werden abgespielt, wenn sich Ihr Gesamtgewinn/-verlust um mehr als 0,5% ändert."
+
+msgid "Select a help topic"
+msgstr "Wählen Sie ein Hilfethema"
