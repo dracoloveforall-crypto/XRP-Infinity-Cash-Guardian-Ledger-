@@ -1,7 +1,7 @@
 # Cryptonite
 Cryptonite - Cryptocurrency Tracker Widget for KDE Plasma
 
-![Cryptonite Widget](contents/images/crypto.jpg)
+![Cryptonite Widget](https://github.com/SonnyDee1/Cryptonite/blob/main/crypto.jpg)
 
 A beautiful and functional cryptocurrency tracker widget for KDE Plasma 6. Monitor real-time prices, manage your portfolio, and track your investments with support for multiple cryptocurrencies.
 
