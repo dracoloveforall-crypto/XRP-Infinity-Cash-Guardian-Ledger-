@@ -1,0 +1,51 @@
+XRP AI ---Activate 
+Authenticate Ai XRP Robotic Protybe. 
+
+-Convert Solana -Connected XRP --Transfer-- XRP 
+
+
+def get_amm_info(asset_code, issuer):
+    """
+    Fetches information about an AMM pool on the XRP Ledger.
+    Liquidity providers earn a portion of the trading fees from these pools.
+    """
+    # Using a public XRPL Mainnet node
+    client = JsonRpcClient("https://s1.ripple.com:51234")
+    
+    # Define the asset pair (e.g., XRP and a stablecoin like RLUSD)
+    # Note: RLUSD is Ripple's stablecoin used in card settlement pilots.
+    request = AMMInfo(
+        asset={
+            "currency": "XRP"
+        },
+        asset2={
+            "currency": asset_code,
+            "issuer": issuer
+        }
+    )
+    
+    try:
+        response = client.request(request)
+        if response.is_successful():
+            return response.result
+        else:
+            return f"Error: {response.result['error_message']}"
+    except Exception as e:
+        return f"Connection failed: {str(e)}"
+
+if __name__ == "__main__":
+    # Example: Checking a hypothetical XRP/USD pool
+    # In practice, you would use the actual issuer address for the stablecoin.
+    STABLECOIN_CODE = "USD"
+    ISSUER_ADDRESS = "rvYswW2tmUeCj98WnqTiE7n5mxeuo1qci" # Example Bitstamp Gateway
+    
+    print(f"--- XRP Ledger AMM Analysis ---")
+    print(f"Target Pair: XRP / {STABLECOIN_CODE}")
+    
+    # This is where an AI 'Robot' would analyze market data to decide 
+    # when to provide or withdraw liquidity for maximum growth.
+    info = get_amm_info(STABLECOIN_CODE, ISSUER_ADDRESS)
+    print(json.dumps(info, indent=4))
+    
+    print("\nNote: To 'grow' funds on a Visa card, these earnings must be")
+    print("withdrawn to a regulated exchange and topped up via their official API.")
