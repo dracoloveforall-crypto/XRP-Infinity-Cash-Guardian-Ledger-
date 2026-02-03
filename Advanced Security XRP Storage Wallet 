@@ -1,0 +1,34 @@
+import base64
+import hashlib
+from cryptography.fernet import Fernet
+
+def generate_key(password):
+    # Turns your secret phrase into a secure 32-byte key
+    return base64.urlsafe_b64encode(hashlib.sha256(password.encode()).digest())
+
+def main():
+    print("--- XRP Cold Storage Tool ---")
+    choice = input("Type 'E' to Encrypt or 'D' to Decrypt: ").upper()
+    
+    # Use your secret phrase (e.g., "the cap and the stem")
+    phrase = input("Enter your secret phrase: ")
+    cipher = Fernet(generate_key(phrase))
+
+    if choice == 'E':
+        # Input your XRP Private Key or Seed
+        raw_data = input("Enter the XRP Key to encrypt: ").encode()
+        encrypted = cipher.encrypt(raw_data)
+        print("\n[!] SUCCESS. Copy the string below to your Private GitHub Repo:")
+        print(f"\n{encrypted.decode()}\n")
+        
+    elif choice == 'D':
+        # Paste the encrypted string from GitHub
+        token = input("Paste the encrypted string from GitHub: ").encode()
+        try:
+            decrypted = cipher.decrypt(token)
+            print(f"\n[!] RECOVERED KEY: {decrypted.decode()}")
+        except Exception:
+            print("\n[X] ERROR: Incorrect phrase or corrupted data.")
+
+if __name__ == "__main__":
+    main()
